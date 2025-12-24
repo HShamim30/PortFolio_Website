@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: '#0A2540',
+                        accent: '#3B82F6',
+                        lightgray: '#F3F4F6'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="bg-navy text-white">
+
+    <!-- Fixed Navbar with Backdrop Blur -->
+    <nav class="fixed w-full top-0 z-50 bg-navy/80 backdrop-blur-lg border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-between items-center h-20">
+
+                <!-- Logo with Animation -->
+                <div class="flex items-center gap-3 font-bold text-xl group cursor-pointer">
+                    <div class="p-2 bg-accent/20 rounded-lg group-hover:bg-accent/30 transition-all duration-300">
+                        <i data-lucide="code" class="w-5 h-5 text-accent"></i>
+                    </div>
+                    <span class="bg-gradient-to-r from-white to-accent bg-clip-text text-transparent">
+                        Huzaifa Shamim
+                    </span>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-2">
+                    <a href="./index.html#home"
+                        class="px-4 py-2 rounded-lg text-lightgray hover:text-white hover:bg-white/5 transition-all duration-300 flex items-center gap-2">
+                        <i data-lucide="home" class="w-4 h-4"></i>
+                        <span>Home</span>
+                    </a>
+                    <a href="./index.html#about"
+                        class="px-4 py-2 rounded-lg text-lightgray hover:text-white hover:bg-white/5 transition-all duration-300 flex items-center gap-2">
+                        <i data-lucide="user" class="w-4 h-4"></i>
+                        <span>About</span>
+                    </a>
+                    <a href="./index.html#services"
+                        class="px-4 py-2 rounded-lg text-lightgray hover:text-white hover:bg-white/5 transition-all duration-300 flex items-center gap-2">
+                        <i data-lucide="briefcase" class="w-4 h-4"></i>
+                        <span>Services</span>
+                    </a>
+                    <a href="./index.html#certificates"
+                        class="px-4 py-2 rounded-lg text-lightgray hover:text-white hover:bg-white/5 transition-all duration-300 flex items-center gap-2">
+                        <i data-lucide="award" class="w-4 h-4"></i>
+                        <span>Certificates</span>
+                    </a>
+                    <a href="./index.html#contact"
+                        class="ml-4 px-6 py-2 bg-accent rounded-full text-white hover:bg-accent/90 transition-all duration-300 flex items-center gap-2 shadow-lg shadow-accent/30">
+                        <i data-lucide="mail" class="w-4 h-4"></i>
+                        <span>Contact</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="menu-btn" class="md:hidden p-2 rounded-lg hover:bg-white/5 transition-all duration-300">
+                    <i id="menu-icon" data-lucide="menu" class="w-6 h-6"></i>
+                    <i id="close-icon" data-lucide="x" class="w-6 h-6 hidden"></i>
+                </button>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 bg-navy/95 backdrop-blur-xl hidden z-40 md:hidden">
+        <div class="flex flex-col items-center justify-center h-full space-y-8 px-6">
+            <a href="./index.html#home"
+                class="text-2xl font-semibold text-lightgray hover:text-accent transition-all duration-300 flex items-center gap-3">
+                <i data-lucide="home" class="w-6 h-6"></i>
+                <span>Home</span>
+            </a>
+            <a href="./index.html#about"
+                class="text-2xl font-semibold text-lightgray hover:text-accent transition-all duration-300 flex items-center gap-3">
+                <i data-lucide="user" class="w-6 h-6"></i>
+                <span>About</span>
+            </a>
+            <a href="./index.html#services"
+                class="text-2xl font-semibold text-lightgray hover:text-accent transition-all duration-300 flex items-center gap-3">
+                <i data-lucide="briefcase" class="w-6 h-6"></i>
+                <span>Services</span>
+            </a>
+            <a href="./index.html#certificates"
+                class="text-2xl font-semibold text-lightgray hover:text-accent transition-all duration-300 flex items-center gap-3">
+                <i data-lucide="award" class="w-6 h-6"></i>
+                <span>Certificates</span>
+            </a>
+            <a href="./index.html#contact"
+                class="text-2xl font-semibold text-lightgray hover:text-accent transition-all duration-300 flex items-center gap-3">
+                <i data-lucide="mail" class="w-6 h-6"></i>
+                <span>Contact</span>
+            </a>
+        </div>
+    </div>
+
+<!-- ARTICLE HEADER (DARK) -->
+<header class="pt-28 pb-16 bg-navy text-white">
+  <div class="max-w-3xl mx-auto px-6">
+    <p class="flex items-center gap-2 text-sm text-lightgray mb-3">
+      <i data-lucide="calendar" class="w-4 h-4"></i>
+      September 2025 · Project Article
+    </p>
+
+    <h1 class="text-3xl md:text-4xl font-bold leading-tight mb-4">
+      Microsoft Intune Endpoint Management – Complete Project Overview
+    </h1>
+
+    <p class="text-lightgray text-lg">
+      A detailed explanation of my endpoint management project using Microsoft Intune,
+      covering setup, configuration, challenges, and learnings.
+    </p>
+  </div>
+</header>
+
+<!-- PROJECT OVERVIEW IMAGE -->
+<section class="py-12 bg-white">
+  <div class="max-w-3xl mx-auto px-6">
+    <figure>
+      <img
+        src="./images/intune-overview.png"
+        alt="Microsoft Intune Dashboard"
+        class="w-full rounded-xl border border-gray-200 shadow-sm"
+      />
+      <figcaption class="text-sm text-gray-500 mt-2 text-center">
+        Figure 1: Microsoft Intune Admin Center – Endpoint Management Dashboard
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ARTICLE CONTENT (WHITE BACKGROUND) -->
+<main class="py-20 bg-white">
+  <article class="max-w-3xl mx-auto px-6 space-y-12 leading-relaxed text-gray-700">
+
+    <!-- Introduction -->
+    <section>
+      <h2 class="text-2xl font-semibold text-gray-900 mb-3">
+        Introduction
+      </h2>
+      <p>
+        In this article, I explain how I implemented an endpoint management solution
+        using Microsoft Intune. The objective of this project was to understand
+        real-world device management and security configuration.
+      </p>
+    </section>
+
+    <!-- Image after Introduction -->
+    <section>
+      <figure>
+        <img
+          src="./images/device-enrollment.png"
+          alt="Device Enrollment Process"
+          class="w-full rounded-xl border border-gray-200 shadow-sm"
+        />
+        <figcaption class="text-sm text-gray-500 mt-2 text-center">
+          Figure 2: Device enrollment workflow using Azure AD Join
+        </figcaption>
+      </figure>
+    </section>
+
+    <!-- Project Objective -->
+    <section>
+      <h2 class="text-2xl font-semibold text-gray-900 mb-3">
+        Project Objective
+      </h2>
+      <ul class="list-disc pl-6 space-y-2">
+        <li>Understand Microsoft Intune architecture</li>
+        <li>Enroll and manage Windows devices</li>
+        <li>Apply compliance and configuration policies</li>
+        <li>Deploy applications securely</li>
+      </ul>
+    </section>
+
+    <!-- Highlight Box -->
+    <section class="bg-lightgray border border-gray-200 rounded-xl p-6">
+      <h3 class="text-lg font-semibold text-gray-900 mb-2">
+        Technologies Used
+      </h3>
+      <p>
+        Microsoft Intune, Microsoft 365, Windows OS, Endpoint Security
+      </p>
+    </section>
+
+    <!-- Implementation -->
+    <section>
+      <h2 class="text-2xl font-semibold text-gray-900 mb-3">
+        Implementation Approach
+      </h2>
+      <p>
+        The project started with tenant setup in Microsoft 365, followed by device
+        enrollment and configuration profile assignments.
+      </p>
+    </section>
+
+    <!-- Multiple Images -->
+    <section class="space-y-10">
+      <figure>
+        <img
+          src="./images/configuration-profiles.png"
+          alt="Configuration Profiles"
+          class="w-full rounded-xl border border-gray-200 shadow-sm"
+        />
+        <figcaption class="text-sm text-gray-500 mt-2 text-center">
+          Figure 3: Configuration profiles assigned to managed devices
+        </figcaption>
+      </figure>
+
+      <figure>
+        <img
+          src="./images/compliance-policies.png"
+          alt="Compliance Policies"
+          class="w-full rounded-xl border border-gray-200 shadow-sm"
+        />
+        <figcaption class="text-sm text-gray-500 mt-2 text-center">
+          Figure 4: Compliance policies configured and enforced using Intune
+        </figcaption>
+      </figure>
+    </section>
+
+    <!-- Quote -->
+    <blockquote class="border-l-4 border-accent pl-4 italic text-gray-600">
+      “This project helped me understand enterprise endpoint management beyond theory
+      and strengthened my real-world troubleshooting skills.”
+    </blockquote>
+
+    <!-- Conclusion -->
+    <section>
+      <h2 class="text-2xl font-semibold text-gray-900 mb-3">
+        Conclusion
+      </h2>
+      <p>
+        This project strengthened my interest in IT Support and Endpoint Management
+        and provided practical exposure to Microsoft Intune in a real-world scenario.
+      </p>
+    </section>
+
+  </article>
+</main>
+
+
+
+<!-- Footer -->
+<footer class="bg-navy border-t border-white/10">
+  <div class="max-w-7xl mx-auto px-6 py-10">
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+      <!-- Brand / About -->
+      <div>
+        <h3 class="text-xl font-bold mb-3 flex items-center gap-2">
+          <i data-lucide="code" class="w-5 h-5"></i>
+          Huzaifa Shamim
+        </h3>
+        <p class="text-lightgray leading-relaxed">
+          MCA student with hands-on experience in IT Support, Endpoint Management,
+          Web Development, and a growing interest in Data Science.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h4 class="text-lg font-semibold mb-3">Quick Links</h4>
+        <ul class="space-y-2 text-lightgray">
+          <li><a href="./index.html#home" class="hover:text-accent">Home</a></li>
+          <li><a href="./index.html#about" class="hover:text-accent">About</a></li>
+          <li><a href="./index.html#services" class="hover:text-accent">Services</a></li>
+          <li><a href="./index.html#projects" class="hover:text-accent">Projects</a></li>
+          <li><a href="./index.html#certificates" class="hover:text-accent">Certificates</a></li>
+          <li><a href="./index.html#contact" class="hover:text-accent">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact & Social -->
+      <div>
+        <h4 class="text-lg font-semibold mb-3">Connect</h4>
+
+        <p class="flex items-center gap-2 text-lightgray mb-3">
+          <i data-lucide="mail" class="w-4 h-4"></i>
+          huzaifashamim302004@gmail.com
+        </p>
+
+        <div class="flex gap-4">
+          <a href="https://www.linkedin.com/in/huzaifa-shamim-ahmad-59987539a/" target="_blank"
+             class="p-2 rounded-full border border-white/10 hover:border-accent hover:text-accent transition">
+            <i data-lucide="linkedin" class="w-5 h-5"></i>
+          </a>
+
+          <a href="https://github.com/HShamim30" target="_blank"
+             class="p-2 rounded-full border border-white/10 hover:border-accent hover:text-accent transition">
+            <i data-lucide="github" class="w-5 h-5"></i>
+          </a>
+
+          <a href="mailto:huzaifashamim302004@gmail.com"
+             class="p-2 rounded-full border border-white/10 hover:border-accent hover:text-accent transition">
+            <i data-lucide="mail" class="w-5 h-5"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom -->
+    <div class="border-t border-white/10 mt-8 pt-6 text-center text-lightgray text-sm">
+      © 2025 Huzaifa Shamim. All rights reserved.
+    </div>
+
+  </div>
+</footer>
+
+
+    <!-- JS -->
+    <script>
+        // Navigation button script
+        lucide.createIcons();
+
+        const menuBtn = document.getElementById("menu-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+        const menuIcon = document.getElementById("menu-icon");
+        const closeIcon = document.getElementById("close-icon");
+
+        menuBtn.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+            menuIcon.classList.toggle("hidden");
+            closeIcon.classList.toggle("hidden");
+        });
+
+        // Auto close menu on link click
+        document.querySelectorAll("#mobile-menu a").forEach(link => {
+            link.addEventListener("click", () => {
+                mobileMenu.classList.add("hidden");
+                menuIcon.classList.remove("hidden");
+                closeIcon.classList.add("hidden");
+            });
+        });
+
+        // Text transition Script
+        const texts = [
+            "Web Development",
+            "Microsoft Intune",
+            "Pyhton"
+        ];
+
+        const typingSpeed = 100;   // typing speed
+        const eraseSpeed = 50;     // deleting speed
+        const delayBetween = 1500; // delay before delete
+
+        const textElement = document.getElementById("typing-text");
+
+        let textIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+
+        function typeEffect() {
+            const currentText = texts[textIndex];
+
+            if (!isDeleting) {
+                textElement.textContent = currentText.substring(0, charIndex + 1);
+                charIndex++;
+
+                if (charIndex === currentText.length) {
+                    setTimeout(() => isDeleting = true, delayBetween);
+                }
+            } else {
+                textElement.textContent = currentText.substring(0, charIndex - 1);
+                charIndex--;
+
+                if (charIndex === 0) {
+                    isDeleting = false;
+                    textIndex = (textIndex + 1) % texts.length;
+                }
+            }
+
+            const speed = isDeleting ? eraseSpeed : typingSpeed;
+            setTimeout(typeEffect, speed);
+        }
+
+        typeEffect();
+    </script>
+
+</body>
+
+</html>
