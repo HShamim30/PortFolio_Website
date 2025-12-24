@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: '#0A2540',
+                        accent: '#3B82F6',
+                        lightgray: '#F3F4F6'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="bg-navy text-white">
+
+    <!-- Fixed Navbar with Backdrop Blur -->
+    <nav class="fixed w-full top-0 z-50 bg-navy/80 backdrop-blur-lg border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-between items-center h-20">
+
+                <!-- Logo with Animation -->
+                <div class="flex items-center gap-3 font-bold text-xl group cursor-pointer">
+                    <div class="p-2 bg-accent/20 rounded-lg group-hover:bg-accent/30 transition-all duration-300">
+                        <i data-lucide="code" class="w-5 h-5 text-accent"></i>
+                    </div>
+                    <span class="bg-gradient-to-r from-white to-accent bg-clip-text text-transparent">
+                        Huzaifa Shamim
+                    </span>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-2">
+                    <a href="#home"
+                        class="px-4 py-2 rounded-lg text-lightgray hover:text-white hover:bg-white/5 transition-all duration-300 flex items-center gap-2">
+                        <i data-lucide="home" class="w-4 h-4"></i>
+                        <span>Home</span>
+                    </a>
+                    <a href="#about"
+                        class="px-4 py-2 rounded-lg text-lightgray hover:text-white hover:bg-white/5 transition-all duration-300 flex items-center gap-2">
+                        <i data-lucide="user" class="w-4 h-4"></i>
+                        <span>About</span>
+                    </a>
+                    <a href="#services"
+                        class="px-4 py-2 rounded-lg text-lightgray hover:text-white hover:bg-white/5 transition-all duration-300 flex items-center gap-2">
+                        <i data-lucide="briefcase" class="w-4 h-4"></i>
+                        <span>Services</span>
+                    </a>
+                    <a href="#certificates"
+                        class="px-4 py-2 rounded-lg text-lightgray hover:text-white hover:bg-white/5 transition-all duration-300 flex items-center gap-2">
+                        <i data-lucide="award" class="w-4 h-4"></i>
+                        <span>Certificates</span>
+                    </a>
+                    <a href="#contact"
+                        class="ml-4 px-6 py-2 bg-accent rounded-full text-white hover:bg-accent/90 transition-all duration-300 flex items-center gap-2 shadow-lg shadow-accent/30">
+                        <i data-lucide="mail" class="w-4 h-4"></i>
+                        <span>Contact</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="menu-btn" class="md:hidden p-2 rounded-lg hover:bg-white/5 transition-all duration-300">
+                    <i id="menu-icon" data-lucide="menu" class="w-6 h-6"></i>
+                    <i id="close-icon" data-lucide="x" class="w-6 h-6 hidden"></i>
+                </button>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 bg-navy/95 backdrop-blur-xl hidden z-40 md:hidden">
+        <div class="flex flex-col items-center justify-center h-full space-y-8 px-6">
+            <a href="#home"
+                class="text-2xl font-semibold text-lightgray hover:text-accent transition-all duration-300 flex items-center gap-3">
+                <i data-lucide="home" class="w-6 h-6"></i>
+                <span>Home</span>
+            </a>
+            <a href="#about"
+                class="text-2xl font-semibold text-lightgray hover:text-accent transition-all duration-300 flex items-center gap-3">
+                <i data-lucide="user" class="w-6 h-6"></i>
+                <span>About</span>
+            </a>
+            <a href="#services"
+                class="text-2xl font-semibold text-lightgray hover:text-accent transition-all duration-300 flex items-center gap-3">
+                <i data-lucide="briefcase" class="w-6 h-6"></i>
+                <span>Services</span>
+            </a>
+            <a href="#certificates"
+                class="text-2xl font-semibold text-lightgray hover:text-accent transition-all duration-300 flex items-center gap-3">
+                <i data-lucide="award" class="w-6 h-6"></i>
+                <span>Certificates</span>
+            </a>
+            <a href="#contact"
+                class="text-2xl font-semibold text-lightgray hover:text-accent transition-all duration-300 flex items-center gap-3">
+                <i data-lucide="mail" class="w-6 h-6"></i>
+                <span>Contact</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center pt-20 relative overflow-hidden">
+        <!-- Animated Background Elements -->
+        <div class="absolute inset-0 overflow-hidden pointer-events-none">
+            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-pulse"></div>
+            <div
+                class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-1000">
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10 py-12">
+
+            <!-- Left Content -->
+            <div class="space-y-8">
+                <!-- Badge -->
+                <div
+                    class="inline-flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm backdrop-blur-sm">
+                    <i data-lucide="graduation-cap" class="w-4 h-4 text-accent"></i>
+                    <span class="text-lightgray">B.Sc. IT Graduate | Pursuing MCA</span>
+                </div>
+
+                <!-- Main Heading -->
+                <div>
+                    <h1 class="text-5xl lg:text-7xl font-bold leading-tight mb-4">
+                        Hi, I'm <br />
+                        <span class="bg-gradient-to-r from-accent to-blue-400 bg-clip-text text-transparent">
+                            Huzaifa Shamim
+                        </span>
+                    </h1>
+
+                    <div class="text-3xl lg:text-4xl font-semibold text-lightgray">
+                        <span>I Know </span>
+                        <span id="typing-text" class="text-accent"></span>
+                        <span class="animate-pulse">|</span>
+                    </div>
+                </div>
+
+                <!-- Location -->
+                <div class="flex items-center gap-2 text-lightgray">
+                    <i data-lucide="map-pin" class="w-5 h-5 text-accent"></i>
+                    <span class="text-lg">Mumbai, India</span>
+                </div>
+
+                <!-- CTA Buttons -->
+                <div class="flex gap-4 flex-wrap">
+                    <a href="#contact"
+                        class="group px-8 py-4 bg-accent rounded-full font-semibold hover:bg-accent/90 transition-all duration-300 flex items-center gap-2 shadow-xl shadow-accent/30 hover:shadow-accent/50 hover:scale-105">
+                        <i data-lucide="send" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+                        <span>Contact Me</span>
+                    </a>
+
+                    <a href="#projects"
+                        class="px-8 py-4 border-2 border-lightgray/30 rounded-full font-semibold hover:border-accent hover:text-accent transition-all duration-300 flex items-center gap-2 backdrop-blur-sm hover:scale-105">
+                        <i data-lucide="folder-open" class="w-5 h-5"></i>
+                        <span>View Work</span>
+                    </a>
+                </div>
+
+                <!-- Social Links -->
+                <div class="flex gap-4 pt-4">
+                    <a href="https://github.com/HShamim30"
+                        class="p-3 rounded-full border border-white/10 hover:border-accent hover:bg-accent/10 transition-all duration-300">
+                        <i data-lucide="github" class="w-5 h-5"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/huzaifa-shamim-ahmad-59987539a/"
+                        class="p-3 rounded-full border border-white/10 hover:border-accent hover:bg-accent/10 transition-all duration-300">
+                        <i data-lucide="linkedin" class="w-5 h-5"></i>
+                    </a>
+
+                </div>
+            </div>
+
+            <!-- Right Image -->
+            <div class="flex justify-center lg:justify-end">
+                <div class="relative group">
+                    <!-- Main Image Container -->
+                    <div class="relative w-80 h-80 lg:w-96 lg:h-96">
+                        <img src="./src/Formal.jpg"
+                            class="w-full h-full rounded-3xl object-cover border-2 border-white/10 shadow-2xl group-hover:scale-105 transition-transform duration-500"
+                            alt="Huzaifa Shamim" />
+
+                        <!-- Gradient Overlay -->
+                        <div
+                            class="absolute inset-0 rounded-3xl bg-gradient-to-tr from-accent/20 to-transparent group-hover:from-accent/30 transition-all duration-500">
+                        </div>
+
+                        <!-- Glow Effect -->
+                        <div
+                            class="absolute inset-0 rounded-3xl bg-accent/20 blur-3xl group-hover:bg-accent/30 transition-all duration-500 -z-10">
+                        </div>
+
+                        <!-- Floating Elements -->
+                        <div
+                            class="absolute -top-4 -right-4 w-24 h-24 bg-accent/20 rounded-2xl backdrop-blur-sm border border-white/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+                            <i data-lucide="code-2" class="w-12 h-12 text-accent"></i>
+                        </div>
+
+                        <div
+                            class="absolute -bottom-4 -left-4 w-24 h-24 bg-blue-500/20 rounded-2xl backdrop-blur-sm border border-white/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+                            <i data-lucide="database" class="w-12 h-12 text-blue-400"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <i data-lucide="chevron-down" class="w-8 h-8 text-accent"></i>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+
+            <!-- Left: Image -->
+            <div class="hidden md:flex justify-center">
+                <div class="relative max-w-[320px] group">
+                    <img src="./src/Formal.jpg" alt="Huzaifa Shamim"
+                        class="w-full rounded-2xl object-cover border border-white/10 shadow-2xl group-hover:scale-105 transition-transform duration-500" />
+                    <div
+                        class="absolute inset-0 rounded-2xl bg-accent/10 blur-3xl -z-10 group-hover:bg-accent/20 transition-all duration-500">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Content -->
+            <div class="space-y-6">
+                <div
+                    class="inline-flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm backdrop-blur-sm">
+                    <i data-lucide="user" class="w-4 h-4 text-accent"></i>
+                    <span class="text-lightgray tracking-wider uppercase">About Me</span>
+                </div>
+
+                <h2 class="text-4xl md:text-5xl font-bold">
+                    Who I Am
+                </h2>
+
+                <div class="space-y-4 text-lightgray leading-relaxed text-lg">
+                    <p>
+                        I am an <span class="text-white font-semibold">MCA student</span> with a strong foundation in
+                        <span class="text-white">Information Technology</span> and hands-on experience in
+                        <span class="text-white">IT Support and Endpoint Management</span>.
+                    </p>
+
+                    <p>
+                        I work on <span class="text-white">Microsoft Intune and Microsoft 365 administration</span>,
+                        managing devices, policies, and user access. Alongside this, I actively build web applications
+                        using <span class="text-white">HTML, CSS, JavaScript, Node.js, and MongoDB</span>.
+                    </p>
+
+                    <p>
+                        Currently, I am expanding my skills in <span class="text-white">Python and Data Science</span>
+                        to strengthen my analytical and problem-solving abilities and move toward data-driven roles.
+                    </p>
+                </div>
+
+                <!-- Info Badges -->
+                <div class="flex flex-wrap gap-3 pt-4">
+                    <span
+                        class="flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm hover:border-accent transition-all duration-300">
+                        <i data-lucide="briefcase" class="w-4 h-4 text-accent"></i>
+                        IT Support & Endpoint Management
+                    </span>
+                    <span
+                        class="flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm hover:border-accent transition-all duration-300">
+                        <i data-lucide="code" class="w-4 h-4 text-accent"></i>
+                        Web Development
+                    </span>
+                    <span
+                        class="flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm hover:border-accent transition-all duration-300">
+                        <i data-lucide="bar-chart" class="w-4 h-4 text-accent"></i>
+                        Aspiring Data Scientist
+                    </span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20">
+        <div class="max-w-7xl mx-auto px-6">
+
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <div
+                    class="inline-flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm backdrop-blur-sm mb-6">
+                    <i data-lucide="briefcase" class="w-4 h-4 text-accent"></i>
+                    <span class="text-lightgray tracking-wider uppercase">Services</span>
+                </div>
+
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                    What I Do
+                </h2>
+
+                <p class="text-lightgray max-w-3xl mx-auto text-lg leading-relaxed">
+                    IT Support & Endpoint Management | Microsoft Intune & M365 Administration |
+                    Web Development (HTML, CSS, JavaScript, Node.js, MongoDB) |
+                    Python | Aspiring Data Scientist
+                </p>
+            </div>
+
+            <!-- Services Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <!-- Service Card 1 -->
+                <div
+                    class="group bg-navy/50 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:border-accent hover:bg-white/5 transition-all duration-300 hover:scale-105">
+                    <div class="flex items-start gap-4 mb-4">
+                        <div
+                            class="p-3 rounded-xl bg-accent/20 text-accent group-hover:bg-accent group-hover:text-white transition-all duration-300">
+                            <i data-lucide="monitor" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold leading-tight">
+                            IT Support & Endpoint Management
+                        </h3>
+                    </div>
+                    <p class="text-lightgray leading-relaxed">
+                        Providing user support, troubleshooting, and endpoint security with hands-on experience in
+                        Microsoft Intune.
+                    </p>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div
+                    class="group bg-navy/50 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:border-accent hover:bg-white/5 transition-all duration-300 hover:scale-105">
+                    <div class="flex items-start gap-4 mb-4">
+                        <div
+                            class="p-3 rounded-xl bg-accent/20 text-accent group-hover:bg-accent group-hover:text-white transition-all duration-300">
+                            <i data-lucide="cloud" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold leading-tight">
+                            Microsoft Intune & M365 Administration
+                        </h3>
+                    </div>
+                    <p class="text-lightgray leading-relaxed">
+                        Managing devices, users, policies, licenses, and security configurations in Microsoft 365
+                        environments.
+                    </p>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div
+                    class="group bg-navy/50 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:border-accent hover:bg-white/5 transition-all duration-300 hover:scale-105">
+                    <div class="flex items-start gap-4 mb-4">
+                        <div
+                            class="p-3 rounded-xl bg-accent/20 text-accent group-hover:bg-accent group-hover:text-white transition-all duration-300">
+                            <i data-lucide="code" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold leading-tight">
+                            Web Development
+                        </h3>
+                    </div>
+                    <p class="text-lightgray leading-relaxed">
+                        Building modern, responsive websites using HTML, CSS, JavaScript, Node.js, and MongoDB.
+                    </p>
+                </div>
+
+                <!-- Service Card 4 -->
+                <div
+                    class="group bg-navy/50 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:border-accent hover:bg-white/5 transition-all duration-300 hover:scale-105">
+                    <div class="flex items-start gap-4 mb-4">
+                        <div
+                            class="p-3 rounded-xl bg-accent/20 text-accent group-hover:bg-accent group-hover:text-white transition-all duration-300">
+                            <i data-lucide="settings" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold leading-tight">
+                            Windows & Device Configuration
+                        </h3>
+                    </div>
+                    <p class="text-lightgray leading-relaxed">
+                        Configuring Windows devices, system policies, updates, and security baselines.
+                    </p>
+                </div>
+
+                <!-- Service Card 5 -->
+                <div
+                    class="group bg-navy/50 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:border-accent hover:bg-white/5 transition-all duration-300 hover:scale-105">
+                    <div class="flex items-start gap-4 mb-4">
+                        <div
+                            class="p-3 rounded-xl bg-accent/20 text-accent group-hover:bg-accent group-hover:text-white transition-all duration-300">
+                            <i data-lucide="database" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold leading-tight">
+                            Backend & Database Management
+                        </h3>
+                    </div>
+                    <p class="text-lightgray leading-relaxed">
+                        Developing backend APIs and managing databases using Node.js and MongoDB.
+                    </p>
+                </div>
+
+                <!-- Service Card 6 -->
+                <div
+                    class="group bg-navy/50 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:border-accent hover:bg-white/5 transition-all duration-300 hover:scale-105">
+                    <div class="flex items-start gap-4 mb-4">
+                        <div
+                            class="p-3 rounded-xl bg-accent/20 text-accent group-hover:bg-accent group-hover:text-white transition-all duration-300">
+                            <i data-lucide="bar-chart-2" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold leading-tight">
+                            Data Science & Python (Learning)
+                        </h3>
+                    </div>
+                    <p class="text-lightgray leading-relaxed">
+                        Learning Python, data analysis, and visualization techniques to move toward data-driven roles.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="py-20">
+        <div class="max-w-7xl mx-auto px-6">
+
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <div
+                    class="inline-flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm backdrop-blur-sm mb-6">
+                    <i data-lucide="award" class="w-4 h-4 text-accent"></i>
+                    <span class="text-lightgray tracking-wider uppercase">Certificates</span>
+                </div>
+
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                    Certifications & Learning
+                </h2>
+
+                <p class="text-lightgray max-w-3xl mx-auto text-lg">
+                    Verified certifications from trusted learning platforms showcasing my technical skills.
+                </p>
+            </div>
+
+            <!-- Certificates Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Certificate Card 1 -->
+                <a href="https://courses.cognitiveclass.ai/certificates/b8f03b3b8f0145dfbdc9271f7232a16e"
+                    target="_blank"
+                    class="group bg-navy/50 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:border-accent hover:bg-white/5 transition-all duration-300 hover:scale-105">
+
+                    <div class="bg-white rounded-xl p-3 mb-4 overflow-hidden">
+                        <img src="./src/COGNITIVE_PYTHON.png" alt="Python for Data Science Certificate"
+                            class="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-500" />
+                    </div>
+
+                    <h3 class="text-lg font-semibold mb-2">
+                        Python for Data Science Certificate
+                    </h3>
+
+                    <p class="text-lightgray text-sm mb-3">
+                        IBM
+                    </p>
+
+                    <p class="text-sm text-lightgray">
+                        <span class="font-medium text-white">Credential ID:</span>
+                        course-v1:CognitiveClass PY0101EN v3
+                    </p>
+                </a>
+
+                <!-- Certificate Card 2 -->
+                <a href="https://www.coursera.org/account/accomplishments/records/J48L0ZFZDT0D" target="_blank"
+                    class="group bg-navy/50 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:border-accent hover:bg-white/5 transition-all duration-300 hover:scale-105">
+
+                    <div class="bg-white rounded-xl p-3 mb-4 overflow-hidden">
+                        <img src="./src/MICROSOFT_IT.png" alt="Introduction to Computers"
+                            class="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-500" />
+                    </div>
+
+                    <h3 class="text-lg font-semibold mb-2">
+                        Introduction to Computers
+                    </h3>
+
+                    <p class="text-lightgray text-sm mb-3">
+                        MICROSOFT
+                    </p>
+
+                    <p class="text-sm text-lightgray">
+                        <span class="font-medium text-white">Credential ID:</span>
+                        J48L0ZFZDT0D
+                    </p>
+                </a>
+
+                <!-- Certificate Card 3 -->
+                <a href="https://www.coursera.org/account/accomplishments/verify/BGI1NNC8QEOU" target="_blank"
+                    class="group bg-navy/50 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:border-accent hover:bg-white/5 transition-all duration-300 hover:scale-105">
+
+                    <div class="bg-white rounded-xl p-3 mb-4 overflow-hidden">
+                        <img src="./src/IBM_IT_SUPPORT.png" alt="IT Fundamentals"
+                            class="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-500" />
+                    </div>
+
+                    <h3 class="text-lg font-semibold mb-2">
+                        Information Technology (IT) Fundamentals for Everyone
+                    </h3>
+
+                    <p class="text-lightgray text-sm mb-3">
+                        IBM
+                    </p>
+
+                    <p class="text-sm text-lightgray">
+                        <span class="font-medium text-white">Credential ID:</span>
+                        BGI1NNC8QEOU
+                    </p>
+                </a>
+
+                <!-- Certificate Card 4 -->
+                <a href="https://freecodecamp.org/certification/huzaifa_4/scientific-computing-with-python-v7"
+                    target="_blank"
+                    class="group bg-navy/50 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:border-accent hover:bg-white/5 transition-all duration-300 hover:scale-105">
+
+                    <div class="bg-white rounded-xl p-3 mb-4 overflow-hidden">
+                        <img src="./src/Python_Certification.png" alt="Scientific Computing with Python"
+                            class="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-500" />
+                    </div>
+
+                    <h3 class="text-lg font-semibold mb-2">
+                        Scientific Computing with Python
+                    </h3>
+
+                    <p class="text-lightgray text-sm mb-3">
+                        fREECODECAMP
+                    </p>
+
+                    <p class="text-sm text-lightgray">
+                        <span class="font-medium text-white">Credential ID:</span>
+                        huzaifa_4-scwp
+                    </p>
+                </a>
+
+                <!-- Certificate Card 5 -->
+                <a href="https://www.coursera.org/account/accomplishments/professional-cert/certificate/B2SVDMAYSRK6"
+                    target="_blank"
+                    class="group bg-navy/50 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:border-accent hover:bg-white/5 transition-all duration-300 hover:scale-105">
+
+                    <div class="bg-white rounded-xl p-3 mb-4 overflow-hidden">
+                        <img src="./src/GOOGLE_IT_SUPPORT.png" alt="Google IT Support"
+                            class="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-500" />
+                    </div>
+
+                    <h3 class="text-lg font-semibold mb-2">
+                        Google IT Support
+                    </h3>
+
+                    <p class="text-lightgray text-sm mb-3">
+                        GOOGLE
+                    </p>
+
+                    <p class="text-sm text-lightgray">
+                        <span class="font-medium text-white">Credential ID:</span>
+                        B2SVDMAYSRK6
+                    </p>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="bg-navy py-20">
+        <div class="max-w-7xl mx-auto px-6">
+
+            <!-- Section Header -->
+            <div class="text-center mb-14">
+                <p class="flex justify-center items-center gap-2 text-sm tracking-widest text-lightgray uppercase mb-4">
+                    <i data-lucide="folder-open" class="w-4 h-4"></i>
+                    Projects
+                </p>
+
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                    My Projects
+                </h2>
+
+                <p class="text-lightgray max-w-3xl mx-auto">
+                    A selection of academic, personal, and practical projects showcasing my technical skills and
+                    hands-on experience.
+                </p>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Project Card 1 -->
+                <div class="bg-navy/80 border border-white/10 rounded-2xl p-8 hover:border-accent transition">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="p-3 rounded-xl bg-accent/20 text-accent">
+                            <i data-lucide="shield-check" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">
+                            Microsoft Intune Endpoint Management Lab
+                        </h3>
+                    </div>
+
+                    <p class="text-lightgray leading-relaxed mb-4">
+                        A hands-on lab project focused on device enrollment, policy management, application deployment,
+                        and security configuration using Microsoft Intune and Microsoft 365.
+                    </p>
+
+                    <p class="text-sm text-lightgray mb-4">
+                        <span class="font-medium text-white">Technologies:</span>
+                        Microsoft Intune, Microsoft 365, Windows
+                    </p>
+
+                    <div class="flex gap-4">
+                        <a href="#" class="flex items-center gap-2 text-accent text-sm hover:underline">
+                            <i data-lucide="github" class="w-4 h-4"></i>
+                            View Code
+                        </a>
+                        <a href="#" class="flex items-center gap-2 text-accent text-sm hover:underline">
+                            <i data-lucide="external-link" class="w-4 h-4"></i>
+                            Live / Demo
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="bg-navy/80 border border-white/10 rounded-2xl p-8 hover:border-accent transition">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="p-3 rounded-xl bg-accent/20 text-accent">
+                            <i data-lucide="globe" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">
+                            Dynamic Portfolio Website
+                        </h3>
+                    </div>
+
+                    <p class="text-lightgray leading-relaxed mb-4">
+                        A responsive portfolio website with sections for projects, certificates, and services,
+                        built using modern web technologies.
+                    </p>
+
+                    <p class="text-sm text-lightgray mb-4">
+                        <span class="font-medium text-white">Technologies:</span>
+                        HTML, CSS, JavaScript, Node.js, MongoDB
+                    </p>
+
+                    <div class="flex gap-4">
+                        <a href="#" class="flex items-center gap-2 text-accent text-sm hover:underline">
+                            <i data-lucide="github" class="w-4 h-4"></i>
+                            View Code
+                        </a>
+                        <a href="#" class="flex items-center gap-2 text-accent text-sm hover:underline">
+                            <i data-lucide="external-link" class="w-4 h-4"></i>
+                            Live Site
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="bg-navy/80 border border-white/10 rounded-2xl p-8 hover:border-accent transition">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="p-3 rounded-xl bg-accent/20 text-accent">
+                            <i data-lucide="bar-chart-3" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">
+                            Data Analysis with Python
+                        </h3>
+                    </div>
+
+                    <p class="text-lightgray leading-relaxed mb-4">
+                        A beginner-friendly data analysis project involving data cleaning, visualization,
+                        and basic insights using Python.
+                    </p>
+
+                    <p class="text-sm text-lightgray mb-4">
+                        <span class="font-medium text-white">Technologies:</span>
+                        Python, Pandas, Matplotlib
+                    </p>
+
+                    <div class="flex gap-4">
+                        <a href="#" class="flex items-center gap-2 text-accent text-sm hover:underline">
+                            <i data-lucide="github" class="w-4 h-4"></i>
+                            View Code
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+<section id="contact" class="bg-navy py-20">
+  <div class="max-w-5xl mx-auto px-6">
+
+    <!-- Section Header -->
+    <div class="text-center mb-14">
+      <p class="flex justify-center items-center gap-2 text-sm tracking-widest text-lightgray uppercase mb-4">
+        <i data-lucide="mail" class="w-4 h-4"></i>
+        Contact
+      </p>
+
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">
+        Get In Touch
+      </h2>
+
+      <p class="text-lightgray max-w-2xl mx-auto">
+        Have a project, question, or opportunity? Feel free to send me a message.
+      </p>
+    </div>
+
+    <!-- Contact Form -->
+    <form
+      action="mailto:huzaifashamim302004@gmail.com"
+      method="POST"
+      enctype="text/plain"
+      class="bg-navy/80 border border-white/10 rounded-2xl p-8 space-y-6">
+
+      <!-- Name -->
+      <div>
+        <label class="block text-sm mb-2">Your Name</label>
+        <input
+          type="text"
+          name="Name"
+          required
+          class="w-full bg-transparent border border-white/20 rounded-lg px-4 py-3 focus:border-accent outline-none"
+          placeholder="Enter your name"
+        />
+      </div>
+
+      <!-- Email -->
+      <div>
+        <label class="block text-sm mb-2">Your Email</label>
+        <input
+          type="email"
+          name="Email"
+          required
+          class="w-full bg-transparent border border-white/20 rounded-lg px-4 py-3 focus:border-accent outline-none"
+          placeholder="Enter your email"
+        />
+      </div>
+
+      <!-- Message -->
+      <div>
+        <label class="block text-sm mb-2">Message</label>
+        <textarea
+          name="Message"
+          rows="5"
+          required
+          class="w-full bg-transparent border border-white/20 rounded-lg px-4 py-3 focus:border-accent outline-none"
+          placeholder="Write your message here..."
+        ></textarea>
+      </div>
+
+      <!-- Submit -->
+      <button
+        type="submit"
+        class="flex items-center gap-2 bg-accent px-6 py-3 rounded-full font-semibold hover:opacity-90 transition">
+        <i data-lucide="send" class="w-4 h-4"></i>
+        Send Message
+      </button>
+
+    </form>
+
+  </div>
+</section>
+
+
+    <!-- JS -->
+    <script>
+        // Navigation button script
+        lucide.createIcons();
+
+        const menuBtn = document.getElementById("menu-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+        const menuIcon = document.getElementById("menu-icon");
+        const closeIcon = document.getElementById("close-icon");
+
+        menuBtn.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+            menuIcon.classList.toggle("hidden");
+            closeIcon.classList.toggle("hidden");
+        });
+
+        // Auto close menu on link click
+        document.querySelectorAll("#mobile-menu a").forEach(link => {
+            link.addEventListener("click", () => {
+                mobileMenu.classList.add("hidden");
+                menuIcon.classList.remove("hidden");
+                closeIcon.classList.add("hidden");
+            });
+        });
+
+        // Text transition Script
+        const texts = [
+            "Web Development",
+            "Microsoft Intune",
+            "Pyhton"
+        ];
+
+        const typingSpeed = 100;   // typing speed
+        const eraseSpeed = 50;     // deleting speed
+        const delayBetween = 1500; // delay before delete
+
+        const textElement = document.getElementById("typing-text");
+
+        let textIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+
+        function typeEffect() {
+            const currentText = texts[textIndex];
+
+            if (!isDeleting) {
+                textElement.textContent = currentText.substring(0, charIndex + 1);
+                charIndex++;
+
+                if (charIndex === currentText.length) {
+                    setTimeout(() => isDeleting = true, delayBetween);
+                }
+            } else {
+                textElement.textContent = currentText.substring(0, charIndex - 1);
+                charIndex--;
+
+                if (charIndex === 0) {
+                    isDeleting = false;
+                    textIndex = (textIndex + 1) % texts.length;
+                }
+            }
+
+            const speed = isDeleting ? eraseSpeed : typingSpeed;
+            setTimeout(typeEffect, speed);
+        }
+
+        typeEffect();
+    </script>
+
+</body>
+
+</html>
