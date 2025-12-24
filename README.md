@@ -46,7 +46,7 @@ Mobile-first, clean UI/UX, reusable components
 
 🚀 How to Run Locally
 Clone the repository:
-git clone https://github.com/your-username/portfolio-website.git
+git clone https://github.com/HShamim30/portfolio-website.git
 Open the project folder:
 cd portfolio-website
 Open index.html in your browser
