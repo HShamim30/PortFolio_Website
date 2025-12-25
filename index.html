@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./css/index.css">
 
     <script>
         tailwind.config = {
@@ -687,131 +688,195 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="bg-navy py-20">
+    <section class="py-20 bg-gradient-to-br from-navy to-darknavy">
         <div class="max-w-7xl mx-auto px-6">
 
             <!-- Section Header -->
-            <div class="text-center mb-14">
+            <div class="text-center mb-16">
                 <div
-                    class="inline-flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm backdrop-blur-sm mb-6">
-                    <i data-lucide="folder-open" class="w-4 h-4"></i>
-                    <span class="text-lightgray tracking-wider uppercase">Projects</span>
+                    class="inline-flex items-center gap-2 px-4 py-2 bg-accent/10 border border-accent/20 rounded-full text-sm backdrop-blur-sm mb-6">
+                    <i data-lucide="folder-open" class="w-4 h-4 text-accent"></i>
+                    <span class="text-accent tracking-wider uppercase">Projects</span>
                 </div>
 
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                <h2
+                    class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white to-accent bg-clip-text text-transparent">
                     My Projects
                 </h2>
 
-                <p class="text-lightgray max-w-3xl mx-auto">
+                <p class="text-lightgray max-w-3xl mx-auto leading-relaxed">
                     A selection of academic, personal, and practical projects showcasing my technical skills and
                     hands-on experience.
                 </p>
             </div>
 
             <!-- Projects Grid -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
                 <!-- Project Card 1 -->
-                <div class="bg-navy/80 border border-white/10 rounded-2xl p-8 hover:border-accent transition">
-                    <div class="flex items-center gap-4 mb-4">
-                        <div class="p-3 rounded-xl bg-accent/20 text-accent">
-                            <i data-lucide="shield-check" class="w-6 h-6"></i>
+                <div
+                    class="project-card group relative h-96 rounded-2xl border border-accent/40 rounded-2xl shadow-inner overflow-hidden cursor-pointer transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-accent/20">
+                    <!-- Background Image -->
+                    <img src="./Images/MSI_1.png" alt="Microsoft Intune" class="project-image absolute inset-0 w-full h-full object-contain 
+            bg-navy p-4 transition-transform duration-500 group-hover:scale-105">
+
+                    <!-- Default View (visible when not hovering) -->
+                    <div
+                        class="default-view absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-navy/90 to-transparent transition-opacity duration-300">
+                        <h3 class="text-xl font-semibold text-white">Microsoft Intune Deployment</h3>
+                    </div>
+
+                    <!-- Overlay (visible on hover) -->
+                    <div
+                        class="overlay absolute inset-0 bg-gradient-to-t from-navy/95 via-navy/80 to-navy/30 opacity-0 transition-opacity duration-400 flex flex-col justify-end p-8">
+
+                        <!-- Icon -->
+                        <div
+                            class="icon-animate absolute top-8 left-8 w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center">
+                            <i data-lucide="shield-check" class="w-6 h-6 text-accent"></i>
                         </div>
-                        <h3 class="text-xl font-semibold">
-                            Microsoft Intune – MSI Application Deployment
-                        </h3>
-                    </div>
 
-                    <p class="text-lightgray leading-relaxed mb-4">
-                        Deployed Notepad++ MSI application using Microsoft Intune with silent installation, automatic
-                        detection rules, and device-based assignment on Windows endpoints.
-                    </p>
+                        <!-- Content -->
+                        <div class="content-animate">
+                            <h3 class="text-2xl font-semibold text-white mb-3">
+                                Microsoft Intune – MSI Application Deployment
+                            </h3>
+                            <p class="text-lightgray text-sm leading-relaxed mb-4">
+                                Deployed Notepad++ MSI application using Microsoft Intune with silent installation,
+                                automatic detection rules, and device-based assignment.
+                            </p>
 
-                    <p class="text-sm text-lightgray mb-4">
-                        <span class="font-medium text-white">Technologies:</span>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="inline-flex items-center text-xs px-2.5 py-1 rounded-md 
-               bg-white/5 text-lightgray border border-white/10">
-                            MICROSOFT INTUNE
-                        </span>
-                        <span class="inline-flex items-center text-xs px-2.5 py-1 rounded-md 
-               bg-white/5 text-lightgray border border-white/10">
-                            ENDPOINT MANAGEMENT
-                        </span>
-                        <span class="inline-flex items-center text-xs px-2.5 py-1 rounded-md 
-               bg-white/5 text-lightgray border border-white/10">
-                            MSI Deployment
-                        </span>
-                    </div>
-                    </p>
+                            <!-- Tech Tags -->
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span
+                                    class="px-3 py-1 bg-accent/10 border border-accent/30 rounded-lg text-xs text-accent uppercase tracking-wide">
+                                    Microsoft Intune
+                                </span>
+                                <span
+                                    class="px-3 py-1 bg-accent/10 border border-accent/30 rounded-lg text-xs text-accent uppercase tracking-wide">
+                                    Endpoint Mgmt
+                                </span>
+                                <span
+                                    class="px-3 py-1 bg-accent/10 border border-accent/30 rounded-lg text-xs text-accent uppercase tracking-wide">
+                                    MSI Deploy
+                                </span>
+                            </div>
+                        </div>
 
-                    <div class="flex gap-4">
-                        <a href="https://github.com/HShamim30/Microsoft-Intune-MSI-Application-Deployment"
-                            class="flex items-center gap-2 text-accent text-sm hover:underline">
-                            <i data-lucide="github" class="w-4 h-4"></i>
-                            View Code
-                        </a>
-                        
+                        <!-- Links -->
+                        <div class="links-animate flex gap-3">
+                            <a href="https://github.com/HShamim30/Microsoft-Intune-MSI-Application-Deployment"
+                                class="flex items-center gap-2 text-accent text-sm px-4 py-2 border border-accent rounded-lg hover:bg-accent/10 transition-all hover:translate-x-1">
+                                <i data-lucide="github" class="w-4 h-4"></i>
+                                View Code
+                            </a>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Project Card 2 -->
-                <div class="bg-navy/80 border border-white/10 rounded-2xl p-8 hover:border-accent transition">
-                    <div class="flex items-center gap-4 mb-4">
-                        <div class="p-3 rounded-xl bg-accent/20 text-accent">
-                            <i data-lucide="globe" class="w-6 h-6"></i>
+                <div
+                    class="project-card group border border-accent/40 rounded-2xl shadow-inner relative h-96 rounded-2xl overflow-hidden cursor-pointer transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-accent/20">
+                    <img src="./Images/Portfolio_1.png" alt="Portfolio Website" class="project-image absolute inset-0 w-full h-full object-contain 
+            bg-navy p-4 transition-transform duration-500 group-hover:scale-105">
+
+                    <div
+                        class="default-view absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-navy/90 to-transparent transition-opacity duration-300">
+                        <h3 class="text-xl font-semibold text-white">Dynamic Portfolio Website</h3>
+                    </div>
+
+                    <div
+                        class="overlay absolute inset-0 bg-gradient-to-t from-navy/95 via-navy/80 to-navy/30 opacity-0 transition-opacity duration-400 flex flex-col justify-end p-8">
+
+                        <div
+                            class="icon-animate absolute top-8 left-8 w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center">
+                            <i data-lucide="globe" class="w-6 h-6 text-accent"></i>
                         </div>
-                        <h3 class="text-xl font-semibold">
-                            Dynamic Portfolio Website
-                        </h3>
-                    </div>
 
-                    <p class="text-lightgray leading-relaxed mb-4">
-                        A responsive portfolio website with sections for projects, certificates, and services,
-                        built using modern web technologies.
-                    </p>
+                        <div class="content-animate">
+                            <h3 class="text-2xl font-semibold text-white mb-3">
+                                Dynamic Portfolio Website
+                            </h3>
+                            <p class="text-lightgray text-sm leading-relaxed mb-4">
+                                A responsive portfolio website with sections for projects, certificates, and services,
+                                built using modern web technologies.
+                            </p>
 
-                    <p class="text-sm text-lightgray mb-4">
-                        <span class="font-medium text-white">Technologies:</span>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="inline-flex items-center text-xs px-2.5 py-1 rounded-md 
-               bg-white/5 text-lightgray border border-white/10">
-                            HTML
-                        </span>
-                        <span class="inline-flex items-center text-xs px-2.5 py-1 rounded-md 
-               bg-white/5 text-lightgray border border-white/10">
-                            CSS
-                        </span>
-                        <span class="inline-flex items-center text-xs px-2.5 py-1 rounded-md 
-               bg-white/5 text-lightgray border border-white/10">
-                            JavaScript
-                        </span>
-                    </div>
-                    </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span
+                                    class="px-3 py-1 bg-accent/10 border border-accent/30 rounded-lg text-xs text-accent uppercase tracking-wide">HTML</span>
+                                <span
+                                    class="px-3 py-1 bg-accent/10 border border-accent/30 rounded-lg text-xs text-accent uppercase tracking-wide">CSS</span>
+                                <span
+                                    class="px-3 py-1 bg-accent/10 border border-accent/30 rounded-lg text-xs text-accent uppercase tracking-wide">JavaScript</span>
+                            </div>
+                        </div>
 
-                    <div class="flex gap-4">
-                        <a href="https://github.com/HShamim30/PortFolio_Website"
-                            class="flex items-center gap-2 text-accent text-sm hover:underline">
-                            <i data-lucide="github" class="w-4 h-4"></i>
-                            View Code
-                        </a>
-                        <a href="#" class="flex items-center gap-2 text-accent text-sm hover:underline">
-                            <i data-lucide="external-link" class="w-4 h-4"></i>
-                            Live Site
-                        </a>
-                        <a href="./article.html" class="flex items-center gap-2 text-accent text-sm hover:underline">
-                            <i data-lucide="external-link" class="w-4 h-4"></i>
-                            Read
-                        </a>
+                        <div class="links-animate flex gap-3">
+                            <a href="https://github.com/HShamim30/PortFolio_Website"
+                                class="flex items-center gap-2 text-accent text-sm px-4 py-2 border border-accent rounded-lg hover:bg-accent/10 transition-all hover:translate-x-1">
+                                <i data-lucide="github" class="w-4 h-4"></i>
+                                View Code
+                            </a>
+                            <a href="#"
+                                class="flex items-center gap-2 text-accent text-sm px-4 py-2 border border-accent rounded-lg hover:bg-accent/10 transition-all hover:translate-x-1">
+                                <i data-lucide="external-link" class="w-4 h-4"></i>
+                                Live Site
+                            </a>
+                        </div>
                     </div>
                 </div>
 
+                <!-- Project Card 3
+                <div class="project-card group relative h-96 border border-accent/40 rounded-2xl shadow-inner rounded-2xl overflow-hidden cursor-pointer transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-accent/20">
+                    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&h=600&fit=crop" 
+                         alt="Web Development" 
+                         class="project-image absolute inset-0 w-full h-full object-contain 
+            bg-navy p-4 transition-transform duration-500 group-hover:scale-105">
+                    
+                    <div class="default-view absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-navy/90 to-transparent transition-opacity duration-300">
+                        <h3 class="text-xl font-semibold text-white">Add Your Project</h3>
+                    </div>
 
+                    <div class="overlay absolute inset-0 bg-gradient-to-t from-navy/95 via-navy/80 to-navy/30 opacity-0 transition-opacity duration-400 flex flex-col justify-end p-8">
+                        
+                        <div class="icon-animate absolute top-8 left-8 w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center">
+                            <i data-lucide="code" class="w-6 h-6 text-accent"></i>
+                        </div>
+                        
+                        <div class="content-animate">
+                            <h3 class="text-2xl font-semibold text-white mb-3">
+                                Your Next Project
+                            </h3>
+                            <p class="text-lightgray text-sm leading-relaxed mb-4">
+                                Add more projects by duplicating the card structure and updating the content, images, and links.
+                            </p>
+                            
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-accent/10 border border-accent/30 rounded-lg text-xs text-accent uppercase tracking-wide">React</span>
+                                <span class="px-3 py-1 bg-accent/10 border border-accent/30 rounded-lg text-xs text-accent uppercase tracking-wide">Node.js</span>
+                                <span class="px-3 py-1 bg-accent/10 border border-accent/30 rounded-lg text-xs text-accent uppercase tracking-wide">MongoDB</span>
+                            </div>
+                        </div>
+
+                        <div class="links-animate flex gap-3">
+                            <a href="#" 
+                               class="flex items-center gap-2 text-accent text-sm px-4 py-2 border border-accent rounded-lg hover:bg-accent/10 transition-all hover:translate-x-1">
+                                <i data-lucide="github" class="w-4 h-4"></i>
+                                View Code
+                            </a>
+                            <a href="#" 
+                               class="flex items-center gap-2 text-accent text-sm px-4 py-2 border border-accent rounded-lg hover:bg-accent/10 transition-all hover:translate-x-1">
+                                <i data-lucide="external-link" class="w-4 h-4"></i>
+                                Demo
+                            </a>
+                        </div>
+                    </div>
+                </div> -->
 
             </div>
         </div>
     </section>
-
     <!-- Contact Section -->
     <section id="contact" class="bg-navy py-20">
         <div class="max-w-5xl mx-auto px-6">

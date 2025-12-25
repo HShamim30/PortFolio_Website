@@ -13,3 +13,54 @@
   0%, 50%, 100% { opacity: 1; }
   25%, 75% { opacity: 0; }
 }
+
+/* Project css */
+ @keyframes slideUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        
+        .project-card:hover .overlay {
+            opacity: 1;
+        }
+        
+        .project-card:hover .project-image {
+            transform: scale(1.1);
+        }
+        
+        .project-card:hover .default-view {
+            opacity: 0;
+        }
+        
+        .project-card:hover .icon-animate {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        
+        .project-card:hover .content-animate {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        
+        .project-card:hover .links-animate {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        
+        .icon-animate {
+            transform: translateY(-20px);
+            opacity: 0;
+            transition: all 0.4s ease 0.1s;
+        }
+        
+        .content-animate {
+            transform: translateY(20px);
+            opacity: 0;
+            transition: all 0.4s ease 0.2s;
+        }
+        
+        .links-animate {
+            transform: translateY(10px);
+            opacity: 0;
+            transition: all 0.4s ease 0.3s;
+        }
