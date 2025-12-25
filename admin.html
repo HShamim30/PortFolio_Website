@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Panel</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-100 min-h-screen">
+
+<div class="max-w-4xl mx-auto py-10 px-6">
+  <h1 class="text-3xl font-bold mb-6">Admin – Create Project</h1>
+
+  <!-- LOGIN -->
+  <div class="bg-white p-6 rounded-xl shadow mb-8">
+    <h2 class="font-semibold mb-4">Admin Login</h2>
+    <input id="email" class="border p-2 w-full mb-3" placeholder="Email"/>
+    <input id="password" type="password" class="border p-2 w-full mb-3" placeholder="Password"/>
+    <button onclick="login()" class="bg-blue-600 text-white px-4 py-2 rounded">Login</button>
+  </div>
+
+  <!-- CREATE PROJECT -->
+  <div class="bg-white p-6 rounded-xl shadow">
+    <h2 class="font-semibold mb-4">New Project / Blog</h2>
+
+    <input id="title" class="border p-2 w-full mb-3" placeholder="Project Title"/>
+    <textarea id="description" class="border p-2 w-full mb-3" placeholder="Short Description"></textarea>
+
+    <textarea id="sections" class="border p-2 w-full mb-3 h-40"
+      placeholder='Sections JSON:
+[
+ { "heading":"Intro", "content":"Text here" },
+ { "heading":"Skills", "content":"More text" }
+]'></textarea>
+
+    <input id="images" type="file" multiple class="mb-4"/>
+
+    <button onclick="createProject()" class="bg-green-600 text-white px-4 py-2 rounded">
+      Upload Project
+    </button>
+  </div>
+</div>
+
+<script src="./js/admin.js"></script>
+</body>
+</html>
